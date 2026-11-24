@@ -33,6 +33,8 @@ def output_path():
 
 
 def main():
+    if not 1 <= len(SENTENCE) <= 200:
+        raise ValueError("sentence must be 1 to 200 characters")
     path = output_path()
     parent = os.path.dirname(path)
     if parent:
